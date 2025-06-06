@@ -1,9 +1,11 @@
 import requests
 import pandas as pd
+from dotenv import load_dotenv
 import os
 
-# Your API token here or load from .env if you prefer
-API_TOKEN = "f08c6677ff494022ad5195cda5c137ee"
+load_dotenv()  # loads .env file contents into environment variables
+
+API_TOKEN = os.getenv("API_TOKEN")
 
 HEADERS = {'X-Auth-Token': API_TOKEN}
 
